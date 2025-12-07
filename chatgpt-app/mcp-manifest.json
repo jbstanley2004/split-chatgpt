@@ -1,0 +1,90 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/mcp-manifest.json",
+  "name": "split-payments",
+  "version": "1.0.0",
+  "description": "Split Payments merchant onboarding app for ChatGPT. Complete your business profile and start accepting payments.",
+  "homepage": "https://www.ccsplit.org",
+  "author": {
+    "name": "Split Payments",
+    "url": "https://www.ccsplit.org"
+  },
+  "server": {
+    "transport": "http",
+    "url": "https://your-v0-project.vercel.app/api/chatgpt-mcp"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true
+  },
+  "tools": [
+    {
+      "name": "split_start_onboarding",
+      "description": "Start the Split Payments merchant application process"
+    },
+    {
+      "name": "split_authenticate",
+      "description": "Sign in or create a Split Payments account"
+    },
+    {
+      "name": "split_save_business_info",
+      "description": "Save business information for the merchant application"
+    },
+    {
+      "name": "split_save_owner_info",
+      "description": "Save owner information for the merchant application"
+    },
+    {
+      "name": "split_save_business_address",
+      "description": "Save business address for the merchant application"
+    },
+    {
+      "name": "split_save_bank_account",
+      "description": "Save bank account for deposits"
+    },
+    {
+      "name": "split_save_processing_details",
+      "description": "Save payment processing details and preferences"
+    },
+    {
+      "name": "split_submit_application",
+      "description": "Submit the completed merchant application"
+    }
+  ],
+  "resources": [
+    {
+      "uri": "ui://widget/auth.html",
+      "name": "Authentication Widget",
+      "mimeType": "text/html+skybridge"
+    },
+    {
+      "uri": "ui://widget/business-info.html",
+      "name": "Business Information Widget",
+      "mimeType": "text/html+skybridge"
+    },
+    {
+      "uri": "ui://widget/owner-info.html",
+      "name": "Owner Information Widget",
+      "mimeType": "text/html+skybridge"
+    },
+    {
+      "uri": "ui://widget/business-address.html",
+      "name": "Business Address Widget",
+      "mimeType": "text/html+skybridge"
+    },
+    {
+      "uri": "ui://widget/bank-account.html",
+      "name": "Bank Account Widget",
+      "mimeType": "text/html+skybridge"
+    },
+    {
+      "uri": "ui://widget/processing-details.html",
+      "name": "Processing Details Widget",
+      "mimeType": "text/html+skybridge"
+    },
+    {
+      "uri": "ui://widget/confirmation.html",
+      "name": "Confirmation Widget",
+      "mimeType": "text/html+skybridge"
+    }
+  ]
+}
