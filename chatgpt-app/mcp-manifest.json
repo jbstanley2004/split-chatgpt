@@ -10,7 +10,7 @@
   },
   "server": {
     "transport": "http",
-    "url": "https://your-v0-project.vercel.app/api/chatgpt-mcp"
+    "url": "https://v0-qd-0k0-bcu8-a9-ms.vercel.app/api/chatgpt-mcp"
   },
   "capabilities": {
     "tools": true,
