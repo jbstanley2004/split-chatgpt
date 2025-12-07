@@ -11,7 +11,15 @@ const sessions = new Map<string, any>()
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { method, params, id } = body
+    // log incoming body for debugging from ChatGPT connector creation
+    console.log("MCP incoming body:", JSON.stringify(body))
+
+    let { method, params, id } = body
+
+    // Normalize method name variants that some clients send (dots vs slashes)
+    if (typeof method === "string") {
+      method = method.replace(/\./g, "/")
+    }
 
     // Handle different MCP methods
     switch (method) {
